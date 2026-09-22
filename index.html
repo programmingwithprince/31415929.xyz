@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- todo: test if scalable=no causes issues on old safari later -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+  <title>Prince // 31415929.xyz — Research & Systems Portal</title>
+  <meta name="title" content="Prince // 31415929.xyz — Research & Systems Portal" />
+  <meta name="description" content="Personal portal, systems engineering laboratory, and autonomous subdomain network of Prince (@programmingwithprince)." />
+  <meta name="keywords" content="Prince, programmingwithprince, 31415929, 31415929.xyz, software engineer, developer portfolio" />
+  <meta name="author" content="Prince" />
+  <link rel="canonical" href="https://31415929.xyz/" />
+
+  <!-- og tags (preview cards) -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://31415929.xyz/" />
+  <meta property="og:title" content="Prince // 31415929.xyz" />
+  <meta property="og:description" content="Central engineering node and autonomous subdomain gateway of @programmingwithprince." />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/programmingwithprince" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://31415929.xyz/" />
+  <meta name="twitter:title" content="Prince // 31415929.xyz" />
+  <meta name="twitter:description" content="Central engineering node and autonomous subdomain gateway of @programmingwithprince." />
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/programmingwithprince" />
+
+  <!-- structured data for google crawler -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://31415929.xyz/#person",
+        "name": "Prince",
+        "alternateName": "programmingwithprince",
+        "url": "https://31415929.xyz",
+        "image": "https://avatars.githubusercontent.com/programmingwithprince",
+        "sameAs": [
+          "https://github.com/programmingwithprince",
+          "https://github.com/sponsors/programmingwithprince",
+          "https://tools.31415929.xyz"
+        ],
+        "jobTitle": "Software Developer & Systems Engineer"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://31415929.xyz/#website",
+        "url": "https://31415929.xyz",
+        "name": "31415929.xyz",
+        "publisher": { "@id": "https://31415929.xyz/#person" }
+      }
+    ]
+  }
+  </script>
+
+  <!-- font imports -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="ambient-grid"></div>
+
+  <main class="terminal-container">
+    
+    <!-- header stuff -->
+    <header class="header-bar">
+      <div class="brand-mark">
+        <div class="pi-badge">&pi;</div>
+        <div class="title-area">
+          <h1>31415929.XYZ</h1>
+          <p>Root Matrix // Core Hub</p>
+        </div>
+      </div>
+      <div class="telemetry-pill">
+        <span class="pulse-dot"></span>
+        <span id="system-time">UTC: --:--:--</span>
+        <span>•</span>
+        <span style="color: var(--cyan-bright);">NODE ACTIVE</span>
+      </div>
+    </header>
+
+    <!-- quick sys info strip -->
+    <div class="system-status-ticker">
+      <div class="ticker-item">
+        <span class="ticker-label">Host Protocol</span>
+        <span class="ticker-val">TLS 1.3 // HTTPS</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-label">Cluster Routing</span>
+        <span class="ticker-val">Decentralized Subdomains</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-label">Edge Node</span>
+        <span class="ticker-val">GitHub CDN [Global]</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-label">Architecture</span>
+        <span class="ticker-val">Vanilla Zero-Runtime</span>
+      </div>
+    </div>
+
+    <!-- profile bio card -->
+    <section class="profile-hero">
+      <div class="avatar-frame">
+        <!-- default fallback img in case github api ratelimits us -->
+        <img id="gh-avatar" src="https://avatars.githubusercontent.com/programmingwithprince" alt="Prince Avatar" />
+      </div>
+      <div class="profile-details">
+        <div class="profile-name-row">
+          <h2 id="gh-name" class="profile-name">Prince</h2>
+          <span class="verified-chip">ENGINEER</span>
+        </div>
+        <div id="gh-login" class="profile-handle">@programmingwithprince</div>
+        <p id="gh-bio" class="profile-bio">
+          Systems developer and researcher exploring algorithmic computation, high-precision mathematical visualizers, and decentralized subdomains.
+        </p>
+      </div>
+    </section>
+
+    <!-- counts row -->
+    <section class="telemetry-row">
+      <div class="telemetry-box">
+        <div id="gh-repos" class="telemetry-val">--</div>
+        <div class="telemetry-label">Public Repositories</div>
+      </div>
+      <div class="telemetry-box">
+        <div id="gh-followers" class="telemetry-val">--</div>
+        <div class="telemetry-label">Network Followers</div>
+      </div>
+      <div class="telemetry-box">
+        <div id="gh-following" class="telemetry-val">--</div>
+        <div class="telemetry-label">Following Peers</div>
+      </div>
+      <div class="telemetry-box">
+        <div class="telemetry-val" style="color: var(--accent-green);">100%</div>
+        <div class="telemetry-label">Open Source Integrity</div>
+      </div>
+    </section>
+
+    <!-- subdomains partition (keep names unlisted) -->
+    <section>
+      <div class="section-head">
+        <div class="section-title">
+          <span>// AUTONOMOUS SUBDOMAIN PARTITIONS</span>
+        </div>
+        <div class="section-subtitle">Independent Clusters</div>
+      </div>
+
+      <div class="cluster-grid">
+        <!-- tools subdomain -->
+        <a href="https://tools.31415929.xyz" class="cluster-card" style="border-color: rgba(56, 189, 248, 0.4);">
+          <div>
+            <div class="cluster-top">
+              <span class="cluster-domain">tools.31415929.xyz</span>
+              <span class="cluster-badge">LIVE UTILITY</span>
+            </div>
+            <p class="cluster-desc">
+              Dedicated high-performance partition hosting client-side applications, statistical engines, and focused micro-utilities.
+            </p>
+          </div>
+          <div class="cluster-action">
+            ENTER PARTITION &rarr;
+          </div>
+        </a>
+
+        <!-- sandbox / staging node -->
+        <div class="cluster-card">
+          <div>
+            <div class="cluster-top">
+              <span class="cluster-domain">lab.31415929.xyz</span>
+              <span class="cluster-badge" style="border-color: #eab308; color: #fde047; background: rgba(234, 179, 8, 0.1);">STAGING</span>
+            </div>
+            <p class="cluster-desc">
+              Experimental sandbox for parametric physics computations, mathematical canvas shaders, and exploratory algorithms.
+            </p>
+          </div>
+          <div class="cluster-action" style="color: #94a3b8; cursor: not-allowed;">
+            LOCAL DEPLOYMENT ONLY
+          </div>
+        </div>
+
+        <!-- api placeholder -->
+        <div class="cluster-card">
+          <div>
+            <div class="cluster-top">
+              <span class="cluster-domain">api.31415929.xyz</span>
+              <span class="cluster-badge" style="border-color: #64748b; color: #94a3b8; background: rgba(100, 116, 139, 0.1);">RESERVED</span>
+            </div>
+            <p class="cluster-desc">
+              Structured JSON data feeds, population statistical parameters, and cross-platform numerical endpoints.
+            </p>
+          </div>
+          <div class="cluster-action" style="color: #64748b; cursor: not-allowed;">
+            RESTRICTED ACCESS
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- principles / design goals -->
+    <section>
+      <div class="section-head">
+        <div class="section-title">
+          <span>// ENGINEERING PARADIGM</span>
+        </div>
+        <div class="section-subtitle">Execution Standards</div>
+      </div>
+
+      <div class="philosophy-panel">
+        <div class="philo-block">
+          <h4>01. Zero-Framework Overhead</h4>
+          <p>Prioritizing pure HTML5, vanilla JavaScript, and hardware-accelerated Canvas over heavy bundle footprints.</p>
+        </div>
+        <div class="philo-block">
+          <h4>02. Mathematical Fidelity</h4>
+          <p>Deploying exact numerical approximations directly on the client with zero network roundtrip latency.</p>
+        </div>
+        <div class="philo-block">
+          <h4>03. Partitioned Sovereignty</h4>
+          <p>Every tool runs on an isolated subdomain without cross-service tracking or external bloat.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- console terminal log -->
+    <section>
+      <div class="section-head">
+        <div class="section-title">
+          <span>// SYSTEM LOG FEED</span>
+        </div>
+        <div class="section-subtitle">Realtime Event Bus</div>
+      </div>
+
+      <div class="terminal-log-box" id="log-feed">
+        <div class="log-line">
+          <span class="log-ts">[BOOT]</span>
+          <span class="log-msg">SYSTEM: Root domain kernel initialized on <span class="log-highlight">31415929.xyz</span>.</span>
+        </div>
+        <div class="log-line">
+          <span class="log-ts">[NET]</span>
+          <span class="log-msg">NET: Subdomain routing gateway to <span class="log-highlight">tools.31415929.xyz</span> verified.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- bottom contact buttons -->
+    <section class="links-row">
+      <a href="https://github.com/programmingwithprince" target="_blank" rel="noopener noreferrer" class="action-pill pill-gh">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub Profile
+      </a>
+
+      <!-- change to contact@31415929.xyz when domain email is ready -->
+      <a href="mailto:programmingwithprince1@gmail.com?subject=[Sponsorship%20Inquiry]%20Project%20Support&body=Hi%20Prince,%0D%0A%0D%0AI%20would%20like%20to%20support/sponsor%20your%20development%20work.%20Details:%0D%0A" class="action-pill pill-sponsor">
+        &hearts; Sponsor Engineering
+      </a>
+
+      <a href="mailto:programmingwithprince1@gmail.com?subject=[Inquiry]%20Connecting%20via%2031415929.xyz&body=Hi%20Prince,%0D%0A%0D%0A" class="action-pill pill-contact">
+        &#9993; Direct Contact
+      </a>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div>SYS_ARCH // GITHUB PAGES HOSTED // ROOT_ID: 31415929.XYZ</div>
+      <div class="footer-links">
+        <span>MAINTAINED BY <a href="https://github.com/programmingwithprince" target="_blank" rel="noopener noreferrer">@PROGRAMMINGWITHPRINCE</a></span>
+        <span>•</span>
+        <span>CONTACT: <a href="mailto:programmingwithprince1@gmail.com?subject=Contact%20Inquiry%20from%2031415929.xyz" class="contact-email">programmingwithprince1@gmail.com</a></span>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

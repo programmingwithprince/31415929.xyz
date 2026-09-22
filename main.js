@@ -95,7 +95,35 @@ async function loadGitHubTelemetry() {
     appendSysLog('WARN', 'GitHub node unreachable. Offline mode active.');
   }
 }
+(async function initGitHubData() {
+  const CACHE_KEY = 'gh_data';
+  let repos = [];
 
+  // 1. Try to read from browser cache first
+  const cached = sessionStorage.getItem(CACHE_KEY);
+  if (cached) {
+    repos = JSON.parse(cached);
+  } else {
+    try {
+      const res = await fetch('https://api.github.com/users/programmingwithprince/repos?sort=updated&per_page=10');
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      repos = await res.json();
+      sessionStorage.setItem(CACHE_KEY, JSON.stringify(repos));
+    } catch (err) {
+      console.warn('GitHub API unavailable, using offline fallback:', err);
+      // Fallback data so the site never looks blank or broken
+      repos = [
+        { name: "tools.31415929.xyz", description: "Autonomous developer toolkit & utilities", html_url: "https://tools.31415929.xyz" },
+        { name: "31415929.xyz", description: "Central systems & research terminal node", html_url: "https://31415929.xyz" }
+      ];
+    }
+  }
+
+  // 2. Data is ready to use!
+  // Example: Available globally as window.myRepos or pass directly to your terminal renderer
+  window.myRepos = repos;
+  console.log("Loaded repos:", repos);
+})();
 // init when dom is ready
 document.addEventListener('DOMContentLoaded', () => {
   // start clock timer

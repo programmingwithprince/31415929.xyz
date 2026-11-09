@@ -111,23 +111,31 @@
         <span class="ticker-val">Vanilla Zero-Runtime</span>
       </div>
   </div>
-    <section class="profile-hero">
+<section class="profile-hero">
       <div class="avatar-frame">
 
-        <img id="gh-avatar" src="https://avatars.githubusercontent.com/programmingwithprince" alt="Prince Avatar" />
+        <img id="gh-avatar" src="https://avatars.githubusercontent.com/u/86817604?v=4" alt="Prince Avatar">
       </div>
       <div class="profile-details">
         <div class="profile-name-row">
-          <h2 id="gh-name" class="profile-name">Prince</h2>
+          <h2 id="gh-name" class="profile-name">&lt;ProgrammingWithPrince/&gt;</h2>
           <span class="verified-chip">ENGINEER</span>
         </div>
         <div id="gh-login" class="profile-handle">@programmingwithprince</div>
         <p id="gh-bio" class="profile-bio">
-          Systems developer and researcher exploring algorithmic computation, high-precision mathematical visualizers, and decentralized subdomains.
+          Inpendent Developer building native browser utilities, android apps, backend application using python flask or javascript. Have build several projects regarding terminal and python tools like file-sharing, file-orgaizer or downloaders. Doing these things since 2020.
         </p>
-      </div>
-    </section>
+   
+              <div class="profile-bio">Native W3C APIs (Screen Wake Lock, Canvas 2D, Web Storage) using pure vanilla ES6+ in the browser. Python &amp; Flask for backend endpoints, scripts, and automation pipelines.
+            </div>
 
+              <div class="profile-bio">Building strictly original tools when there is a real friction point to solve—zero tutorial clones, zero npm framework bloat, and 100% local client memory execution.</div>
+            
+          
+        
+      
+      
+    </div></section>
     <section class="telemetry-row">
       <div class="telemetry-box">
         <div id="gh-repos" class="telemetry-val">--</div>
@@ -207,30 +215,24 @@
     </section>
 
     <!-- principles / design goals -->
-    <section>
-      <div class="section-head">
-        <div class="section-title">
-          <span>// ENGINEERING PARADIGM</span>
-        </div>
-        <div class="section-subtitle">Execution Standards</div>
-      </div>
+<!-- GitHub Starred Repositories Carousel Section -->
+<section class="repos-carousel-section">
+  <div class="section-head">
+    <div class="section-title">
+      <span>// FEATURED REPOSITORIES</span>
+    </div>
+    <div class="section-subtitle">Auto-Synced &bull; Threshold &ge; 2 &starf;</div>
+  </div>
 
-      <div class="philosophy-panel">
-        <div class="philo-block">
-          <h4>01. Zero-Framework Overhead</h4>
-          <p>Prioritizing pure HTML5, vanilla JavaScript, and hardware-accelerated Canvas over heavy bundle footprints.</p>
-        </div>
-        <div class="philo-block">
-          <h4>02. Mathematical Fidelity</h4>
-          <p>Deploying exact numerical approximations directly on the client with zero network roundtrip latency.</p>
-        </div>
-        <div class="philo-block">
-          <h4>03. Partitioned Sovereignty</h4>
-          <p>Every tool runs on an isolated subdomain without cross-service tracking or external bloat.</p>
-        </div>
+  <div class="carousel-viewport" id="carousel-viewport">
+    <div class="carousel-track" id="repos-track">
+      <!-- Loading placeholder while API fetches -->
+      <div class="repo-card skeleton">
+        <span class="repo-loading-text">[QUERYING GITHUB API :: FETCHING REPOSITORIES...]</span>
       </div>
-    </section>
-
+    </div>
+  </div>
+</section>
     <!-- console terminal log -->
     <section>
       <div class="section-head">
